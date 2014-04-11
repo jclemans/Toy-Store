@@ -12,3 +12,9 @@
  *= require_tree .
  *= require bootstrap
  */
+
+.signin {
+  position: absolute;
+  right: 2em;
+  top: 1em;
+}

@@ -10,20 +10,26 @@
 
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
+
       <%= link_to "Homepage", products_path, :class => "navbar-text pull-left" %>
 
-      <% if current_user %>
-        Logged in as <%= current_user.user_name %>.
-      <% else %>
-        <%= link_to "Create User", new_user_path, :class => "navbar-text pull-right" %>
-        <%= link_to "Log In", new_session_path, :class => "navbar-text pull-right"%>
-      <% end %>
-    </div>
+      <div class="signin">
+        <% if current_user %>
+          Logged in as <%= current_user.user_name %> |
+          <%= link_to "Log Out", session_path("current"), method: "delete" %>
 
+        <% else %>
+          <%= link_to "Create User", new_user_path %> |
+          <%= link_to "Log In", new_session_path %>
+        <% end %>
+      </div>
+
+    </div>
   </div>
   <br>
   <br>
   <div class="container" id="main">
+    <br>
     <%= flash[:notice] %>
     <%= flash[:alert] %>
     <%= yield %>
