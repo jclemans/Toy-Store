@@ -1,4 +1,4 @@
 Store::Application.routes.draw do
-  # root to: products_path
+  root :to => 'products#index'
   resources :products
 end

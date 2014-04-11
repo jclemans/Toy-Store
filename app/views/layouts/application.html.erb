@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Store</title>
+  <title>Fruit Store</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= flash[:notice] %>
-<%= yield %>
 
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+    <%= link_to "Homepage", products_path, :class => "navbar-text pull-left" %>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="container" id="main">
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+    <%= yield %>
+  </div>
 </body>
 </html>
