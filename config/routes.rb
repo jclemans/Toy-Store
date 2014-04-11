@@ -1,6 +1,6 @@
 Store::Application.routes.draw do
-  resources :users
-
   root :to => 'products#index'
   resources :products
+  resources :users
+  resources :sessions
 end
