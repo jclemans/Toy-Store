@@ -7,6 +7,12 @@ class ApplicationController < ActionController::Base
     redirect_to login_url, alert: "Not authorized" if current_user.nil?
   end
 
+  def authorize_admin
+    if current_user.admin == false
+      flash[:alert] = "Not authorized"
+      render :back
+    end
+  end
 
 private
 

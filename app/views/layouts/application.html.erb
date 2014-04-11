@@ -14,16 +14,17 @@
       <%= link_to "Homepage", products_path, :class => "navbar-text pull-left" %>
 
       <div class="signin">
-        <% if current_user %>
+        <% if current_user && current_user.admin %>
+          Logged in as <%= current_user.user_name %> (admin) |
+          <%= link_to "Create User", signup_path %> |
+          <%= link_to "Log Out", logout_path %>
+        <% elsif current_user %>
           Logged in as <%= current_user.user_name %> |
           <%= link_to "Log Out", logout_path %>
-
         <% else %>
-          <%= link_to "Create User", signup_path %> |
           <%= link_to "Log In", login_path %>
         <% end %>
       </div>
-
     </div>
   </div>
   <br>
