@@ -10,4 +10,9 @@ FactoryGirl.define do
       description 'A delicious apple'
     end
   end
+
+  factory :user do
+    user_name "MyString"
+    password_digest "MyString"
+  end
 end
