@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
 
+  before_filter :authorize, only: [:new, :edit, :update, :destroy]
+
   def get_product
     @product = Product.find(params[:id])
   end
