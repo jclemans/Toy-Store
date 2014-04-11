@@ -1,6 +1,8 @@
 <h1>Store Home</h1>
 
-<%= link_to 'Add Product', new_product_path, :class => 'btn btn-primary' %>
+<% if current_user %>
+  <%= link_to 'Add Product', new_product_path, :class => 'btn btn-primary' %>
+<% end %>
 
 <h4>Products List</h4>
 
