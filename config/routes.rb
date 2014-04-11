@@ -3,6 +3,7 @@ Store::Application.routes.draw do
   resources :products
   resources :users
   resources :sessions
+  resources :product_uploads
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'

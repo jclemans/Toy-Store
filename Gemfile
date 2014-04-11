@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'factory_girl_rails'
 gem 'bcrypt'
 gem 'paperclip', "~> 4.1"
+gem 'smarter_csv'
 
 
 group :development do

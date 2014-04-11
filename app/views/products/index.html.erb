@@ -1,10 +1,23 @@
 <h1>Store Home</h1>
 
+<h4>Admin Tools</h4>
 <% if current_user %>
   <%= link_to 'Add Product', new_product_path, :class => 'btn btn-primary' %>
 <% end %>
+<% if current_user.admin %>
 
-<h4>Products List</h4>
+<h4>File Upload</h4>
+  <%= form_tag product_uploads_path, method: 'post', multipart: true do %>
+    <div class="form-group">
+      <%= file_field_tag :file %>
+    </div>
+    <%= submit_tag "Import" %>
+  <% end %>
+<% end %>
+
+
+
+<h2>Products List</h2>
 
 <ul class="list-unstyled">
 <% @products.each do |product| %>
