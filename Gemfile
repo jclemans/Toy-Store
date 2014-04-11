@@ -10,7 +10,7 @@ gem 'turbolinks'
 gem 'factory_girl_rails'
 gem 'bcrypt'
 gem 'paperclip', "~> 4.1"
-gem 'launchy'
+
 
 group :development do
   gem 'better_errors'
@@ -22,6 +22,8 @@ end
 group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'faker'
+  gem 'launchy'
 end
 
 group :test do
