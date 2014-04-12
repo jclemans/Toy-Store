@@ -16,9 +16,9 @@ Done:
 
 * As a store owner, I want to make sure only I and other store employees can add, edit, and remove products. Only allow unauthenticated users to list and show products; all other actions for products and all actions for users should be restricted to authenticated users.
 
-To Do:
-
 * As a store owner, I want to add product in bulk by uploading a CSV with information on them. Hint: Add a ProductUploadsController with only new and create actions.
+
+To Do:
 
 * As a store owner, I want to optionally add an image to a product.
 * As a store owner, after I upload a CSV, I want to see a list of any rows that couldn't be imported.
